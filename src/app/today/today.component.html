@@ -3,8 +3,8 @@
 <mat-grid-list [cols]="1">
   <mat-grid-tile>
     <div class="container">
-      <img src="src/assets/shape2.png">
-      <div class="centered">160</div>
+      <img align="center" src="src/assets/shape2.png">
+      <div class="centered">{{rssFeed.getLatestAQI()}}</div>
       <div class="down">AQI</div>
     </div>
   </mat-grid-tile>

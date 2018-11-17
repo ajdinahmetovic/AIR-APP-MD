@@ -1,0 +1,13 @@
+label {
+  font-family: 'Montserrat', sans-serif !important;
+}
+/* active tab */
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+  color:red;
+  background-color: green;
+}
+
+/* ink bar */
+::ng-deep .mat-ink-bar {
+  background-color: var(--primary-color,#1F89CE) !important;
+}

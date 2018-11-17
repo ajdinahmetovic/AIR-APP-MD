@@ -12,28 +12,15 @@ import {Observable} from 'rxjs';
 })
 export class TodayComponent implements OnInit {
 
-  readonly API = 'http://dosairnowdata.org/dos/RSS/Sarajevo/Sarajevo-PM2.5.xml';
 
-  rssFeed: Rss = new Rss();
+  rssFeed: Rss ;
 
   constructor(private http: HttpClient, private parser: NgxXml2jsonService) {
-    this.getData();
   }
 
   ngOnInit() {
-
+    this.rssFeed = new Rss(this.http);
   }
-
-  getData() {
-
-    this.http.get(this.API, {responseType: 'text'}).subscribe((response => {
-      this.rssFeed.processData(response);
-    }));
-
-
-  }
-
-
 
 
 }

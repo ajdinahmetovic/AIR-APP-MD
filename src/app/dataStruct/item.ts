@@ -1,13 +1,13 @@
 
 export class Item {
 
-  title: string;
+  title = '';
   description: string;
   Params: string;
   Conc: string;
   NowCastConc: string;
   AQI: string;
-  Desc: string;
+  Desc = '';
   ReadingDateTime: string;
 
 
