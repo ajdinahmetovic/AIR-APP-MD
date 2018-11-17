@@ -1,0 +1,49 @@
+<h4 align="center" class="day">Monday</h4>
+
+<mat-grid-list [cols]="1">
+  <mat-grid-tile>
+    <div class="container">
+      <img src="src/assets/shape2.png">
+      <div class="centered">160</div>
+      <div class="down">AQI</div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list [cols]="1" rowHeight="50">
+
+  <mat-grid-tile>
+    <div class="container">
+      <img src="src/assets/location.png">
+      <div class="city">{{rssFeed.channel.title}}, BA</div>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <div class="container">
+      <img src="src/assets/time.png">
+      <div class="city">16:00</div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list [cols]="1" rowHeight="220">
+  <mat-grid-tile>
+    <div class="container">
+      <img src="src/assets/tipp.png">
+      <div class="headline">Unhealthy</div>
+      <div class="line">Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.</div>
+
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list [cols]="1" rowHeight="80">
+  <mat-grid-tile>
+    <div class="container">
+      <img src="src/assets/podijeli.png">
+      <div class="share">SHARE</div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
