@@ -4,6 +4,7 @@ import {NgxXml2jsonService} from 'ngx-xml2json';
 import {Rss} from '../dataStruct/rss';
 import {JsonConvert} from 'json2typescript';
 import {Observable} from 'rxjs';
+import {AppComponent} from '../app.component';
 
 @Component({
   selector: 'app-today',
@@ -13,13 +14,17 @@ import {Observable} from 'rxjs';
 export class TodayComponent implements OnInit {
 
 
+
+  date: Date = new Date();
+
+
   rssFeed: Rss ;
 
-  constructor(private http: HttpClient, private parser: NgxXml2jsonService) {
+  constructor(private http: HttpClient, private app: AppComponent) {
+    this.rssFeed = app.rssFeed;
   }
 
   ngOnInit() {
-    this.rssFeed = new Rss(this.http);
   }
 
 

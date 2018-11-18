@@ -5,23 +5,26 @@ import { AppComponent } from './app.component';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './routes';
 import { TodayComponent } from './today/today.component';
-import { WeeklyComponent } from './weekly/weekly.component';
 import { TipsComponent } from './tips/tips.component';
 import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
 import {MatGridListModule, MatTabsModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
+import { HourlyComponent } from './hourly/hourly.component';
+import {SwipeDirective} from './swipeDirective';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TodayComponent,
-    WeeklyComponent,
     TipsComponent,
     HeaderComponent,
-    NavComponent
+    NavComponent,
+    HourlyComponent,
+    SwipeDirective
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import {HttpClientModule} from '@angular/common/http';
     MatTabsModule,
     MatGridListModule,
     HttpClientModule
+
   ],
 
  exports: [

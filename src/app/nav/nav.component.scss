@@ -3,11 +3,15 @@ label {
 }
 /* active tab */
 ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
-  color:red;
-  background-color: green;
+
+  background-color: white;
 }
 
 /* ink bar */
 ::ng-deep .mat-ink-bar {
-  background-color: var(--primary-color,#1F89CE) !important;
+  background-color: var(--primary-color,#404040) !important;
+}
+
+::ng-deep .mat-tab-group {
+  background-color: white;
 }

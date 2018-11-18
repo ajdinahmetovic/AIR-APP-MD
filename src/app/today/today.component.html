@@ -1,28 +1,28 @@
-<h4 align="center" class="day">Monday</h4>
+<h4 align="center" class="day">{{date | date: 'EEEE'}}</h4>
 
 <mat-grid-list [cols]="1">
   <mat-grid-tile>
     <div class="container">
-      <img align="center" src="src/assets/shape2.png">
+      <img  style="width: 100%" align="center" src="src/assets/shape2.png">
       <div class="centered">{{rssFeed.getLatestAQI()}}</div>
       <div class="down">AQI</div>
     </div>
   </mat-grid-tile>
 </mat-grid-list>
 
-<mat-grid-list [cols]="1" rowHeight="50">
+<mat-grid-list [cols]="1" rowHeight="80">
 
   <mat-grid-tile>
     <div class="container">
-      <img src="src/assets/location.png">
+      <img style="width: 50%" src="src/assets/location.png">
       <div class="city">{{rssFeed.channel.title}}, BA</div>
     </div>
   </mat-grid-tile>
 
   <mat-grid-tile>
     <div class="container">
-      <img src="src/assets/time.png">
-      <div class="city">16:00</div>
+      <img style="width: 30%" src="src/assets/time.png">
+      <div class="city">{{date | date: 'H:mm'}}</div>
     </div>
   </mat-grid-tile>
 </mat-grid-list>
@@ -30,10 +30,9 @@
 <mat-grid-list [cols]="1" rowHeight="220">
   <mat-grid-tile>
     <div class="container">
-      <img src="src/assets/tipp.png">
+      <img style="width: 100%" src="src/assets/tipp.png">
       <div class="headline">Unhealthy</div>
-      <div class="line">Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.</div>
-
+      <div class="line">{{rssFeed.channel.items[23].description}}</div>
     </div>
   </mat-grid-tile>
 </mat-grid-list>
@@ -41,7 +40,7 @@
 <mat-grid-list [cols]="1" rowHeight="80">
   <mat-grid-tile>
     <div class="container">
-      <img src="src/assets/podijeli.png">
+      <img style="width: 50%" src="src/assets/podijeli.png">
       <div class="share">SHARE</div>
     </div>
   </mat-grid-tile>

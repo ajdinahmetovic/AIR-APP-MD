@@ -10,7 +10,4 @@ export class Item {
   Desc = '';
   ReadingDateTime: string;
 
-
-
-
 }

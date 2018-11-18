@@ -1,5 +1,7 @@
-<mat-tab-group mat-stretch-tabs mat-align-tabs="center">
-  <mat-tab label="Now"></mat-tab>
+<mat-tab-group mat-stretch-tabs mat-align-tabs="center" (selectedTabChange)="navigate($event)"  [(selectedIndex)]="selectedIndex" [(tabs)]="tabs" swipeTab>
+  <mat-tab label="Now">
+
+  </mat-tab>
   <mat-tab label="Hourly"></mat-tab>
   <mat-tab label="Health tips "></mat-tab>
 </mat-tab-group>

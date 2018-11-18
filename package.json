@@ -24,6 +24,7 @@
     "@angular/router": "^6.1.0",
     "@types/chart.js": "^2.7.40",
     "angular-bootstrap-md": "^6.3.0",
+    "angular-web-storage": "^4.1.0",
     "angular5-csv": "^0.2.10",
     "chart.js": "^2.5.0",
     "core-js": "^2.5.4",

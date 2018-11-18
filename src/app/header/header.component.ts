@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Rss} from '../dataStruct/rss';
-import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +8,9 @@ import {HttpClient} from '@angular/common/http';
 })
 export class HeaderComponent implements OnInit {
 
-    rssFeed: Rss;
-  constructor(private http: HttpClient) {
-    this.rssFeed = new Rss(this.http);
+    @Input() rssFeed: Rss;
+  constructor() {
+    // this.rssFeed = new Rss(this.http);
 
   }
 

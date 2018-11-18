@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Rss} from './dataStruct/rss';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AIR-APP-MD';
+  rssFeed: Rss;
+
+  constructor (private http: HttpClient) {
+
+    this.rssFeed = new Rss(http);
+
+  }
 }

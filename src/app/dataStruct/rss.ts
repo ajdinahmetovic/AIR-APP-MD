@@ -30,6 +30,8 @@ export class Rss {
 
     }
 
+    this.reverseArray();
+
      this.testAPI();
 
   }
@@ -71,6 +73,13 @@ export class Rss {
   getLatestStatus (): string {
     return this.channel.items[23].Desc;
   }
+
+  reverseArray () {
+    for (let i = 0; i < 23; i++) {
+      this.channel.itemsReverse[i] = this.channel.items[23 - i];
+    }
+  }
+
 
 
 }

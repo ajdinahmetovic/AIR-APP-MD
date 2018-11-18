@@ -21,3 +21,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+::ng-deep mat-grid-list {
+  background-color: #F2F2F4;
+
+}
