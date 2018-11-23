@@ -1,3 +1,17 @@
+
+<div class="scrollmenu">
+
+  <a *ngFor="let item of rssFeed.channel.itemsReverse">
+  <div class="container">
+    <img  style="width: 25%" align="center" src="src/assets/shape2.png">
+    <div class="centered">{{item.AQI}}</div>
+    <div class="down">AQI</div>
+  </div>
+  </a>
+
+</div>
+
+
 <mat-grid-list [cols]="3" *ngFor="let item of rssFeed.channel.itemsReverse" rowHeight="80" style="font-family: 'Montserrat', sans-serif">
   <mat-grid-tile>
     <h3>{{item.ReadingDateTime | date: 'HH:mm'}}</h3>

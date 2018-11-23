@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {NgxXml2jsonService} from 'ngx-xml2json';
 import {Rss} from '../dataStruct/rss';
-import {JsonConvert} from 'json2typescript';
-import {Observable} from 'rxjs';
 import {AppComponent} from '../app.component';
 import {MatBottomSheet} from '@angular/material';
 import {ShareComponent} from '../share/share.component';

@@ -1,10 +1,6 @@
-<mat-grid-list [cols]="2" rowHeight="90">
-  <mat-grid-tile>
-    <h3 class="heading">Air quality</h3>
-  </mat-grid-tile>
-  <mat-grid-tile>
+<mat-grid-list [cols]="1" rowHeight="50">
+  <mat-grid-tile class="red">
     <div class="container">
-      <img  style="height: 100%" class="img-fluid" src="src/assets/shape1.png">
       <div class="centered">{{rssFeed.getLatestStatus()}}</div>
     </div>
   </mat-grid-tile>

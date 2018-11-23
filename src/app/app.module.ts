@@ -14,6 +14,10 @@ import {HttpClientModule} from '@angular/common/http';
 import { HourlyComponent } from './hourly/hourly.component';
 import {SwipeDirective} from './swipeDirective';
 import { ShareComponent } from './share/share.component';
+import {ShareButtonModule} from '@ngx-share/button';
+import {ShareButtonsModule} from '@ngx-share/buttons';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
 
 
 
@@ -35,7 +39,9 @@ import { ShareComponent } from './share/share.component';
     MatTabsModule,
     MatGridListModule,
     HttpClientModule,
-    MatBottomSheetModule
+    MatBottomSheetModule,
+    ShareButtonsModule.forRoot(),
+    FontAwesomeModule
   ],
   entryComponents: [
     ShareComponent
