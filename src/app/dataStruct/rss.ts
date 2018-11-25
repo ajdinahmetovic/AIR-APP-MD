@@ -4,11 +4,22 @@ import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
 
 export class Rss {
 
+
+
+
   channel: Channel = new Channel();
 
+
+  public chartDatasets: Array<any> = [
+    {data: [this.channel.items[0],this.channel.items[1], this.channel.items[2]], label: 'AQI Value'},
+  ];
+
+  data: Array <any> = new Array<any>();
   private readonly API = 'http://dosairnowdata.org/dos/RSS/Sarajevo/Sarajevo-PM2.5.xml';
 
   processData (xml: string) {
+
+
 
     this.channel.title = xml.substring(xml.indexOf('<title>') + 7, xml.indexOf('</title>'));
 
@@ -24,15 +35,11 @@ export class Rss {
       this.channel.items[i].description = xml.substring(xml.indexOf('<description>') + 13, xml.indexOf('</description>'));
       this.channel.items[i].Desc = xml.substring(xml.indexOf('<Desc>') + 6, xml.indexOf('</Desc>'));
       this.channel.items[i].Conc = xml.substring(xml.indexOf('<Conc>') + 6, xml.indexOf('</Conc>'));
-
-
       xml = xml.substring(xml.indexOf('</item>') + 7 + 6, xml.length);
-
     }
 
     this.reverseArray();
     this.testAPI();
-
   }
 
   testAPI () {
@@ -78,8 +85,24 @@ export class Rss {
   }
 
   reverseArray () {
-    for (let i = 0; i < 23; i++) {
+    for (let i = 0; i < 24; i++) {
       this.channel.itemsReverse[i] = this.channel.items[23 - i];
     }
   }
+
+  AQIs (): Array<any> {
+
+
+    for (let i = 0; i < 24; i++) {
+      this.data.push( this.channel.items[i].AQI);
+      // console.log(this.channel.items[i].AQI);
+    }
+
+    return this.data;
+  }
+
+
+
+
+
 }

@@ -1,0 +1,23 @@
+
+<div class="scrollmenu">
+
+    <mat-grid-list [cols]="2" [rowHeight]="65" class="list" *ngFor="let item of rssFeed.channel.itemsReverse">
+      <mat-grid-tile>
+        <div class="photo" >
+          <img style="width: 40%; height: 40%" src="src/assets/shape_red.svg">
+        </div>
+        <div class="txt">
+          {{item.AQI}}
+        </div>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <h5 style="width: 100%; color: #000;">
+          {{item.Desc}}
+        </h5>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+
+
+</div>

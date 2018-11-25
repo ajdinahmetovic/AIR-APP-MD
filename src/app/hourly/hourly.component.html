@@ -1,25 +1,15 @@
+<app-scrollbar></app-scrollbar>
 
-<div class="scrollmenu">
 
-  <a *ngFor="let item of rssFeed.channel.itemsReverse">
-  <div class="container">
-    <img  style="width: 25%" align="center" src="src/assets/shape2.png">
-    <div class="centered">{{item.AQI}}</div>
-    <div class="down">AQI</div>
-  </div>
-  </a>
-
+<div style="display: block">
+  <canvas mdbChart
+          [chartType]="chartType"
+          [datasets]="chartDatasets"
+          [labels]="chartLabels"
+          [colors]="chartColors"
+          [options]="chartOptions"
+          [legend]="true"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)">
+  </canvas>
 </div>
-
-
-<mat-grid-list [cols]="3" *ngFor="let item of rssFeed.channel.itemsReverse" rowHeight="80" style="font-family: 'Montserrat', sans-serif">
-  <mat-grid-tile>
-    <h3>{{item.ReadingDateTime | date: 'HH:mm'}}</h3>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <h5>{{item.Desc}}</h5>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <h3>{{item.AQI}}</h3>
-  </mat-grid-tile>
-</mat-grid-list>

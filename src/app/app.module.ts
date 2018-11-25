@@ -18,6 +18,10 @@ import {ShareButtonModule} from '@ngx-share/button';
 import {ShareButtonsModule} from '@ngx-share/buttons';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
+import { ScrollbarComponent } from './scrollbar/scrollbar.component';
+import {ChartsModule} from 'angular-bootstrap-md';
+import { PrticlesInfoComponent } from './prticles-info/prticles-info.component';
+
 
 
 
@@ -30,7 +34,9 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
     NavComponent,
     HourlyComponent,
     SwipeDirective,
-    ShareComponent
+    ShareComponent,
+    ScrollbarComponent,
+    PrticlesInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +47,8 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
     HttpClientModule,
     MatBottomSheetModule,
     ShareButtonsModule.forRoot(),
-    FontAwesomeModule
+    FontAwesomeModule,
+    ChartsModule
   ],
   entryComponents: [
     ShareComponent
@@ -56,4 +63,7 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+
+}
