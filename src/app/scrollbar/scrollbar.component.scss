@@ -1,10 +1,11 @@
 div.scrollmenu {
-  background-color: #F2F2F4;
+
+  background-color: white;
   overflow: auto;
   white-space: nowrap;
 }
 
-div.scrollmenu mat-grid-list {
+div.scrollmenu mat-card {
   width: 70%;
   height: 100%;
   display: inline-block;
@@ -13,9 +14,11 @@ div.scrollmenu mat-grid-list {
   padding-top: 14px;
   padding-left: -10px;
   text-decoration: none;
+  border-radius: 50px/50%;
+
 }
 
-div.scrollmenu mat-grid-list:hover {
+div.scrollmenu mat-card:hover {
   background-color:#FFFFFF;
 }
 
@@ -81,4 +84,15 @@ html {
   width: 100%;
   background: #FFFFFF;
   border-radius: 4%;
+}
+
+.card {
+  margin-top: 3%;
+  height: 40%;
+  margin-left: 5%;
+}
+
+.size {
+  width: 10px !important;
+
 }

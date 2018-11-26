@@ -8,18 +8,16 @@ import { TodayComponent } from './today/today.component';
 import { TipsComponent } from './tips/tips.component';
 import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
-import {MatBottomSheetModule, MatGridListModule, MatTabsModule} from '@angular/material';
+import {MatBottomSheetModule, MatCardModule, MatGridListModule, MatListModule, MatTabsModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatDividerModule} from '@angular/material/divider';
 import {HttpClientModule} from '@angular/common/http';
 import { HourlyComponent } from './hourly/hourly.component';
 import {SwipeDirective} from './swipeDirective';
 import { ShareComponent } from './share/share.component';
-import {ShareButtonModule} from '@ngx-share/button';
 import {ShareButtonsModule} from '@ngx-share/buttons';
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import { ScrollbarComponent } from './scrollbar/scrollbar.component';
-import {ChartsModule} from 'angular-bootstrap-md';
+import {ButtonsModule, CarouselModule, ChartsModule, WavesModule} from 'angular-bootstrap-md';
 import { PrticlesInfoComponent } from './prticles-info/prticles-info.component';
 
 
@@ -47,8 +45,14 @@ import { PrticlesInfoComponent } from './prticles-info/prticles-info.component';
     HttpClientModule,
     MatBottomSheetModule,
     ShareButtonsModule.forRoot(),
-    FontAwesomeModule,
-    ChartsModule
+    MatDividerModule,
+    ChartsModule,
+    MatCardModule,
+    MatListModule,
+    CarouselModule,
+    WavesModule,
+    ButtonsModule
+    //
   ],
   entryComponents: [
     ShareComponent

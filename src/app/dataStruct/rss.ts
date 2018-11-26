@@ -39,7 +39,7 @@ export class Rss {
     }
 
     this.reverseArray();
-    this.testAPI();
+    // this.testAPI();
   }
 
   testAPI () {
@@ -77,11 +77,9 @@ export class Rss {
   }
 
   getLatestStatus (): string {
-    if (this.channel.items[23].Desc === 'Unhealthy for Sensitive Groups') {
-      return 'Unhealthy';
-    } else {
+
       return this.channel.items[23].Desc;
-    }
+
   }
 
   reverseArray () {

@@ -1,5 +1,5 @@
 .day{
-  margin-top: 0%;
+  margin-top: 6%;
   font-size: 200%;
 }
 .container {
@@ -45,29 +45,31 @@ mat-tab-group{
 
 .headline{
   font-family: 'Montserrat', sans-serif;
-
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  font-size: 40%;
+  font-size: 5vw;
 }
 
 .line {
+
   font-family: 'Montserrat', sans-serif;
 
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 50%;
+  width: 75%;
   transform: translate(-50%, -50%);
 
   font-size: 15%;
 }
 
 .share{
-  font-size: 40%;
+  font-size: 25%;
   position: absolute;
+  color: white;
   top: 55%;
   font-family: 'Montserrat', sans-serif;
   left: 50%;

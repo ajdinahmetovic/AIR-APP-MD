@@ -17,4 +17,34 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  getColor (arg): string {
+    switch (arg) {
+      case 'Good': {
+        return '#1aff66';
+      }
+
+      case 'Moderate': {
+        return '#ffd11a';
+      }
+
+
+
+      case 'Unhealthy for Sensitive Groups': {
+        return '#ff8c1a';
+      }
+
+      case 'Unhealthy': {
+        return '#ff1a1a';
+      }
+
+      case 'Very Unhealthy': {
+        return '#990000';
+      }
+
+      case 'Hazardous': {
+        return '#800080';
+      }
+    }
+  }
+
 }

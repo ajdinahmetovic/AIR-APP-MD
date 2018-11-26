@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, LOCALE_ID, OnInit} from '@angular/core';
 import {Rss} from '../dataStruct/rss';
 import {HttpClient} from '@angular/common/http';
 import {AppComponent} from '../app.component';
@@ -12,6 +12,7 @@ import {DatePipe, formatDate} from '@angular/common';
 export class HourlyComponent implements OnInit {
 
 
+  @Inject(LOCALE_ID) public locale: string;
 
 
   constructor(private http: HttpClient, private app: AppComponent) {
@@ -42,8 +43,8 @@ export class HourlyComponent implements OnInit {
   public chartColors: Array<any> = [
 
     {
-      backgroundColor: 'rgba(151,187,205,0.2)',
-      borderColor: 'rgba(151,187,205,1)',
+      backgroundColor: '#A9A9A9',
+      borderColor: '#808080',
       borderWidth: 2,
       pointBackgroundColor: 'rgba(151,187,205,1)',
       pointBorderColor: '#fff',
@@ -53,7 +54,16 @@ export class HourlyComponent implements OnInit {
   ];
 
   public chartOptions: any = {
-    responsive: true
+    responsive: true,
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: false,
+          min: 0,
+          stepSize: 40
+        }
+      }]
+    }
   };
 
   public chartClicked(e: any): void {
@@ -73,7 +83,7 @@ export class HourlyComponent implements OnInit {
   daysGen () {
 
     for ( let i = 0; i < 7; i++) {
-      this.days[i] = formatDate(this.rssFeed.channel.items[23 - i].ReadingDateTime, 'hh:mm', 'en-US', '+0530');
+      this.days[i] = formatDate(this.rssFeed.channel.items[23 - i].ReadingDateTime, 'hh:mm', 'en-US');
       console.log(this.rssFeed.channel.items[i].ReadingDateTime);
 
     }

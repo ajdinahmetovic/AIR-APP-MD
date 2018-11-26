@@ -1,23 +1,43 @@
+<div class="scrollmenu" style="background: #F2F2F4;">
 
-<div class="scrollmenu">
+<mat-card *ngFor="let item of rssFeed.channel.itemsReverse" class="card">
 
-    <mat-grid-list [cols]="2" [rowHeight]="65" class="list" *ngFor="let item of rssFeed.channel.itemsReverse">
-      <mat-grid-tile>
-        <div class="photo" >
-          <img style="width: 40%; height: 40%" src="src/assets/shape_red.svg">
+  <mat-grid-list [cols]="3" [rowHeight]="65" style="background-color: #FFFFFF">
+    <mat-grid-tile>
+      <div class="photo" >
+        <img style="width: 75%; height: 75%" src={{getColor(item.Desc)}}>
         </div>
-        <div class="txt">
-          {{item.AQI}}
-        </div>
-      </mat-grid-tile>
 
-      <mat-grid-tile>
-        <h5 style="width: 100%; color: #000;">
-          {{item.Desc}}
-        </h5>
-      </mat-grid-tile>
+      <div class="txt">
+        {{item.AQI}}
+      </div>
+    </mat-grid-tile>
 
-    </mat-grid-list>
+    <mat-grid-tile [colspan]="2">
+
+      <mat-list>
+
+        <mat-list-item>
+          <h5 style="width: 100%; color: #000;">
+            {{item.Desc}}
+          </h5>
+        </mat-list-item>
+
+        <mat-list-item>
+
+          <h5 style="width: 100%; color: #000;">
+            {{item.ReadingDateTime | date: 'HH:MM'}}
+          </h5>
+        </mat-list-item>
+
+      </mat-list>
+
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+
+</mat-card>
 
 
 </div>
